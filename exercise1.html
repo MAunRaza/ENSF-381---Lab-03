@@ -1,14 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lab3 -- Exercise 1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab3 -- Exercise 1</title>
 </head>
 <body>
-<h1>JavaScript Lab Exercise 1</h1>
-<script>
+  <h1>JavaScript Lab Exercise 1</h1>
 
-</script>
+  <script>
+    // =========================
+    // Exercise 1A: Variables
+    // =========================
+    var course = "ENSF381";
+    let score = 10;
+    const labNumber = 3;
+
+    console.log("Initial let score:", score);
+
+  
+    score = 15;
+    console.log("Updated let score:", score);
+
+
+    try {
+      labNumber = 4; 
+    } catch (e) {
+      console.log("Error: cannot reassign const");
+    }
+
+    // =========================
+    // Exercise 1B: String Operations
+    // =========================
+    let string1 = "Hello, World!";
+    let string2 = "JavaScript is fun!";
+
+
+    console.log("Length of string1:", string1.length);
+
+
+    let combined = string1 + " " + string2;
+    console.log("Concatenated:", combined);
+
+    
+    let string3 = string2.replace("fun", "awesome");
+    console.log("string3:", string3);
+
+    // =========================
+    // Exercise 1C: Template Literals
+    // =========================
+    let name = "Alice";
+    let age = 25;
+
+    let intro = `My name is ${name} and I am ${age} years old`;
+    console.log(intro);
+
+    // =========================
+    // Exercise 1D: Iteration
+    // =========================
+    const students = ["Alice", "Tom", "Charlie"];
+    const ages = [19, 21, 20];
+
+    for (let i = 0; i < students.length; i++) {
+      let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+      console.log(studentInfo);
+    }
+
+    // =========================
+    // Exercise 1E: Working with Dates
+    // =========================
+    let currentDate = new Date();
+
+   
+    console.log("Full date (en-CA):", currentDate.toLocaleDateString("en-CA"));
+    console.log("Full date (en-US):", currentDate.toLocaleDateString("en-US"));
+
+
+    let year = currentDate.getFullYear();
+    let month = currentDate.getMonth(); //
+    let weekday = currentDate.toLocaleDateString("en-US", { weekday: "long" });
+
+    console.log("Year:", year);
+    console.log("Month (0-indexed):", month);
+    console.log("Weekday:", weekday);
+
+
+    let season;
+    if (month === 11 || month === 0 || month === 1) {
+      season = "Winter";
+    } else if (month === 2 || month === 3 || month === 4) {
+      season = "Spring";
+    } else if (month === 5 || month === 6 || month === 7) {
+      season = "Summer";
+    } else {
+      season = "Fall";
+    }
+
+    console.log("Season:", season);
+  </script>
 </body>
 </html>
