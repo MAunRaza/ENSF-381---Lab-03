@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab3 -- Exercise 2</title>
+</head>
+<body>
+  <h1>JavaScript Lab Exercise 2</h1>
+
+  <script>
+    // 2A: Declaring Functions
+    function addA(num1, num2) {
+      return num1 + num2;
+    }
+
+    function subtractA(num1, num2) {
+      return num1 - num2;
+    }
+
+    // 2B: Default Parameters
+    function addB(num1, num2 = 5) {
+      return num1 + num2;
+    }
+
+    function subtractB(num1, num2 = 5) {
+      return num1 - num2;
+    }
+
+    // 2C: Arrow Functions
+    const add = (num1, num2 = 5) => num1 + num2;
+    const subtract = (num1, num2 = 5) => num1 - num2;
+    const multiply = (num1, num2 = 5) => num1 * num2;
+
+    const divide = (num1, num2 = 5) => {
+      if (num2 === 0) {
+        console.log("Error: Division by zero is not allowed");
+        return undefined;
+      }
+      return num1 / num2;
+    };
+
+    // 2D: Callback Functions
+    function calculator(num1, num2, operation) {
+      return operation(num1, num2);
+    }
+  </script>
+</body>
+</html>
